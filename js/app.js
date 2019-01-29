@@ -35,28 +35,47 @@ function translation() {
 hardTimes.addEventListener('click', contents);
 
 function contents() { 
-    if(depress.style.display === 'block'){
-        depress.style.display = 'none';
-    }else{
+    // if(depress.style.display === 'block'){
+        // depress.style.display = 'none';
+    // }else{
         depress.style.display = 'block'
-    }
+    // }
 
 }
 
-
 // 5. Apollo 11
 // Add an event listener to the h3 element id of 'blastOff' and create a function to show and hide the contents in the div element of 'moonWalk' after clicking on Apollo 11.
+
+blastOff.addEventListener('click', hideContents);
+
+function hideContents() {
+    moonWalk.style.display = 'block';
+}
 
 
 
 // 6. The American Civil War
 // Add an event listener to the div element id of 'freedom' and create a function to remove all instances of 'corn' in the content.
 
+freedom.addEventListener('click', removeCorn);
+
+function removeCorn() {
+    var putCorn = document.getElementById('freedom');
+    var findCorn = putCorn.innerHTML.replace(/corn /g, ''); //or replace('corn', '')
+    putCorn.innerHTML = findCorn;
+
+}
 
 // 7. The Renaissance
 // Add an event listener to the div element id of 'rebirth' and create a function to remove all the lowercase and uppercase z's in the content. 
 
+rebirth.addEventListener('click', removeZ) 
 
+function removeZ() {
+    
+
+
+}
 
 // 8. the Gutenberg Printing Press
 // Add an event listener to the h3 element id of 'showBooks' and create a function to display a random book title from the classics array in the div element of 'mustRead'.
