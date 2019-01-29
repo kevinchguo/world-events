@@ -3,6 +3,10 @@
 // 1. The Greatest Thing Since Sliced Bread 
 // Find the onclick event in the h3 element and create a function that will italicize the contents and change the font color to cornflowerblue in the div id of 'bread'.
 
+function italics() {
+    bread.style.color = 'cornflowerblue';
+    bread.style.fontStyle = 'italic';
+}
 
 
 // 2. The Birth of the Internet
@@ -10,7 +14,10 @@
 
 var webContents = 'The Internet got its start in the United States more than 50 years ago as a government weapon in the Cold War. In the 1980s, research at CERN in Switzerland by British computer scientist Tim Berners-Lee resulted in the World Wide Web, linking hypertext documents into an information system, accessible from any node on the network.';
 
-
+function changeContent() {
+    var change = document.getElementById('webby');
+    change.innerHTML = webContents;
+}
 
 // 3. The Boxer Rebellion
 // Find the onclick event in div id of 'fightDaPower' and create a function that will convert the Chinese text in the same div element into English (the English content is provided below).
