@@ -72,8 +72,9 @@ function removeCorn() {
 rebirth.addEventListener('click', removeZ) 
 
 function removeZ() {
-    
-
+    var findZ = document.getElementById('rebirth');
+    removeZs = findZ.innerHTML.replace(/z/gi, '');
+    findZ.innerHTML = removeZs;
 
 }
 
@@ -81,6 +82,15 @@ function removeZ() {
 // Add an event listener to the h3 element id of 'showBooks' and create a function to display a random book title from the classics array in the div element of 'mustRead'.
 
 var classics = ["Charlotte's Web", "War and Peace", "The Secret", "How to Win Friends and Influence People", "Good to Great", "The Lean Startup", "The Odyssey", "Essentialism"];
+
+showBooks.addEventListener('click', randomBook);
+
+function randomBook() {
+    var getBook = document.getElementById('mustRead');
+    var pickBook = classics[Math.floor(Math.random()*classics.length)];
+    getBook.innerHTML = pickBook
+
+}
 
 
 
