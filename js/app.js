@@ -98,7 +98,7 @@ function randomBook() {
 // Add an event listener to the image element and create a function that will toggle between images when hovering (mouseover) on the image.
 
 var changeImage = document.getElementsByTagName('img');
-console.log(changeImage[9]);
+// console.log(changeImage[9]);
 
 changeImage[9].addEventListener('mouseover', changePic);
 
@@ -120,7 +120,19 @@ function changePic() {
 // 10. The Industrial Revolution
 // Add an event listener to the h3 element and create a function that will reverse the contents in the div element id of 'gameChanger'
 
+var chooseTitle = document.getElementsByClassName('title');
+// console.log(chooseTitle[9]);
 
+chooseTitle[9].addEventListener('click', changeStuff);
+
+function changeStuff() {
+    var getContents = gameChanger.innerText;
+    var putArray = getContents.split(' ');
+    var reverseText = putArray.reverse();
+    var makeString = reverseText.join(' ');
+    gameChanger.innerHTML = makeString;
+
+}
 
 // Final Boss
 // Add event listeners for the thumbs up and thumbs down images that will count the number of times the thumb has been clicked on. 
