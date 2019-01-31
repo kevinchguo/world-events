@@ -97,6 +97,21 @@ function randomBook() {
 // 9. World War II
 // Add an event listener to the image element and create a function that will toggle between images when hovering (mouseover) on the image.
 
+var changeImage = document.getElementsByTagName('img');
+console.log(changeImage[9]);
+
+changeImage[9].addEventListener('mouseover', changePic);
+
+function changePic() {
+    if(changeImage[9].src === 'https://www.sagu.edu/images/thoughthub/thumbnails/2015/7-Interesting-Features-of-World-War-2-2.jpg'){
+        changeImage[9].src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73'
+    }else{
+
+    changeImage[9].src = 'https://www.sagu.edu/images/thoughthub/thumbnails/2015/7-Interesting-Features-of-World-War-2-2.jpg'
+    }
+
+}
+
 // use the following image reference:
 // https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjMMBlsYV-Ta5N_GKAoxRDBEa9BRZqdzQRvpiHELEPb6IPVZ73
 
